@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: #7300ff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.pregunta-container{
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+}
+text-container{
+    text-align: center;
+    box-shadow: #4f0094;
+}
+.container{
+    margin-top: 50px;
+}
+
+button {
+  background-color: #b700ff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #9500b3;
+}
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 40px;
+    font-size: 2em;
+    margin-top: 20px;
+    text-shadow: 0 0 10px #6200ff;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+#juego {
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+}
+
+.nodo {
+    color: white;
+    width: 100px;
+    height: 90px;
+    margin: 10px;
+    display: inline-block;
+    line-height: 90px;
+    text-align: center;
+    border-radius: 20%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nodo.vulnerable {
+    background-color: #4f0094;
+    box-shadow: 0 10px 10px #ffffff;
+    animation: blink 1.5s infinite;
+}
+
+.nodo.protegido {
+    background-color: #00ff44;
+    box-shadow: 0 0 15px #00ff44;
+}
+
+.nodo.hackeado {
+    background-color: #ff0077;
+    box-shadow: 0 0 15px #ff006a;
+}
+
+@keyframes blink {
+    0% { box-shadow: 0 0 10px #f0e3e3; }
+    50% { box-shadow: 0 0 20px #be88ff; }
+    100% { box-shadow: 0 0 10px #be44ff; }
+}
+
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(12px);
+    font-size: 14px;
+    text-align: center;
+    box-shadow:
+      0 8px 20px rgba(0, 0, 0, 0.4),
+      inset 0 0 10px rgba(162, 55, 189, 0.3);
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition:
+      opacity 0.4s ease,
+      transform 0.4s ease;
+  }
+  
+  .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.3) transparent transparent transparent;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.3));
+  }
+  
+  .tooltip-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(-15px);
+  }
+  
+  .tooltip-container:hover .tooltip::after {
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+  }
+  
+  .tooltip-trigger {
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition:
+      background 0.3s ease,
+      transform 0.3s ease;
+  }
+  
+  .tooltip-trigger:hover {
+    background: linear-gradient(45deg, #b54ffe, #9000fe);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px srgb(212, 0, 255);
+  }
+
+ 
+  #resultadoFinal {
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    color: yellow;
+}

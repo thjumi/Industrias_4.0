@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Seguridad</title>
+    <link rel="stylesheet" href="juego.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>¡PROTEGE LOS NODOS DE CIBERATAQUES!</h1>
+        <h2>Vidas restantes: <span id="vidas">5</span></h2>
+        <p id="contadorRecargasTexto"></p>
+
+        
+        <div class="tooltip-container">
+            <button class="tooltip-trigger">¿Cómo jugar?</button>
+            <div class="tooltip">Responde bien las preguntas para proteger los nodos de ataques.</div>
+        </div>
+
+        <div id="juego" class="juego-container"></div>
+
+        <div id="pregunta" class="pregunta-container">
+            <p id="textoPregunta"></p>
+            <button onclick="verificarRespuesta(0)" class="btn">A</button>
+            <button onclick="verificarRespuesta(1)" class="btn">B</button>
+            <button onclick="verificarRespuesta(2)" class="btn">C</button>
+        </div>
+        
+        <p id="mensaje"></p>
+        <p id="resultadoFinal"></p>
+    </div>
+    <script src="juego.js"></script>
+</body>
+</html>
