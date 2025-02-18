@@ -1,3 +1,4 @@
+
 // Ocultar el contenedor de preguntas al cargar la página
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("pregunta").style.display = "none";
